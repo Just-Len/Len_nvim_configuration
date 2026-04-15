@@ -27,7 +27,7 @@ end)
 ]]
 
 vim.keymap.set("n", "<leader>s", function()
-  vim.fn.system('kitty bash -c "./mvnw spring-boot:run; exec bash"')
+  vim.fn.system('kitty bash -c "./mvnw spring-boot:run; exec bash" &')
 end, { desc = "Better spring execution using kitty" })
 
 
