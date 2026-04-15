@@ -23,7 +23,9 @@ require("lazy").setup({
         direction = "float",
         open_mapping = [[<c-t>]],
         float_opts = { border = "rounded" },
-      })
+     
+
+    })
     end
   },
 })

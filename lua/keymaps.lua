@@ -15,10 +15,21 @@ vim.keymap.set("n", "<leader>j", function()
   vim.cmd("term javac -d out $(find src -name '*.java') && java -cp out com.app.Main")
 end)
 
+
+--[[
+--
+-- Java non-usefull term
+--
 vim.keymap.set("n", "<leader>s", function()
-  vim.cmd("ToggleTerm")
+    vim.cmd("ToggleTerm")
   vim.cmd("term ./mvnw spring-boot:run")
 end)
+]]
+
+vim.keymap.set("n", "<leader>s", function()
+  vim.fn.system('kitty bash -c "./mvnw spring-boot:run; exec bash"')
+end, { desc = "Better spring execution using kitty" })
+
 
 vim.keymap.set("n", "<leader>r", function()
   vim.cmd("ToggleTerm")
