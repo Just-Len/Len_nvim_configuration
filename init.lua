@@ -1,3 +1,5 @@
+vim.lsp.set_log_level("debug")
+
 require("bootstrap")
 require("options")
 require("plugins")
